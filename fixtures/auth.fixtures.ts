@@ -1,46 +1,25 @@
 import {
-test as base,
-expect,
-Page
+  test as base,
+  expect,
+  Page
 } from "@playwright/test";
 
-
-import { AuthService }
-from "../services/AuthService";
-
-
-
 type AuthFixtures = {
-
-    authenticatedPage: Page;
-
+  authenticatedPage: Page;
 };
 
+export const test = base.extend<AuthFixtures>({
 
+  authenticatedPage: async ({ page }, use) => {
 
-export const test =
-base.extend<AuthFixtures>({
+    await page.goto(process.env.ERP_DOCUMENTS_URL!);
 
+    await page.waitForLoadState("networkidle");
 
-authenticatedPage:
-async(
-    {page},
-    use
-)=>{
+    await use(page);
 
-await page.goto(
-    process.env.ERP_DOCUMENTS_URL!
-);
-
-
-await use(page);
-
-
-}
+  }
 
 });
 
-
-export {
-expect
-};
+export { expect };

@@ -48,3 +48,7 @@ Thumbs.db
 # Build
 dist/
 build/
+
+storage/
+playwright-report/
+test-results/

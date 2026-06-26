@@ -69,11 +69,12 @@ await login.continuarOTP();
 
 await login.validarDashboard();
 
+await this.page.waitForURL(/documents/);
 
+await this.page.waitForLoadState("networkidle");
 
-await this.page.context()
-.storageState({
-    path:"storage/auth.json"
+await this.page.context().storageState({
+    path: "storage/auth.json"
 });
 
 
