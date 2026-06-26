@@ -1,0 +1,50 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.env
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Playwright reports
+playwright-report/
+test-results/
+
+# Authentication storage
+storage/auth.json
+
+# Screenshots and videos
+screenshots/
+videos/
+tmp-current-trace/
+tmp-trace/
+test-result/
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build
+dist/
+build/
