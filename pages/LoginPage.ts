@@ -13,7 +13,7 @@ constructor(
 async abrir(){
 
     await this.page.goto(
-        process.env.ERP_URL!
+        process.env.AUTH_URL!
     );
 
 }

@@ -21,15 +21,15 @@ type AuthFixtures = {
 export const test =
 base.extend<AuthFixtures>({
 
+
 authenticatedPage:
 async(
     {page},
     use
 )=>{
 
-
 await page.goto(
-    process.env.ERP_URL!
+    process.env.ERP_DOCUMENTS_URL!
 );
 
 
@@ -42,5 +42,5 @@ await use(page);
 
 
 export {
-    expect
+expect
 };

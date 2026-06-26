@@ -28,7 +28,6 @@ new LoginPage(
 );
 
 
-
 await login.abrir();
 
 
@@ -70,14 +69,14 @@ await login.continuarOTP();
 
 await login.validarDashboard();
 
+
+
 await this.page.context()
 .storageState({
     path:"storage/auth.json"
 });
-console.log(
-"Sesión guardada"
-);
-}
 
+
+}
 
 }

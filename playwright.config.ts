@@ -34,7 +34,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     
     baseURL:
-        process.env.ERP_URL,
+        process.env.AUTH_URL,
 
     screenshot:"only-on-failure",
 
